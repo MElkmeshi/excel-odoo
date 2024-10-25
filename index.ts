@@ -16,7 +16,7 @@ const main = async () => {
   });
   console.log(`Project created with ID: ${projectId}`);
 
-  const workbook = xlsx.readFile("./tasks.xlsx"); // Replace with your Excel file path
+  const workbook = xlsx.readFile("./tasks.xlsx"); 
   const worksheet = workbook.Sheets[workbook.SheetNames[0]];
   const tasks = xlsx.utils.sheet_to_json(worksheet) as { Name: string }[];
 
